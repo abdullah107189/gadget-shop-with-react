@@ -10,6 +10,8 @@ import CartSection from "../Components/CartSection/CartSection";
 import WishlistSection from "../Components/WishlistSection/WishlistSection";
 import ProductsDetails from "../Pages/ProductsDetails/ProductsDetails";
 import AnotherPage from "../Pages/AnotherPage/AnotherPage";
+import Login from "../Pages/form/Login";
+import Register from "../Pages/form/Register";
 
 const router = createBrowserRouter([
     {
@@ -70,5 +72,13 @@ const router = createBrowserRouter([
             },
         ]
     },
+    {
+        path: 'login',
+        element: <Login></Login>
+    },
+    {
+        path: 'reg',
+        element: <Register></Register>
+    }
 ]);
 export default router;

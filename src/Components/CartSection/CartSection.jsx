@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { CartContext } from "../../Provider/CartContext";
+import { CartContext } from "../../Provider/CartProvider";
 import SingleCartItems from "../SingleCartItems/SingleCartItems";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";

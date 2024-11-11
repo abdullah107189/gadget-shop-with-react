@@ -2,14 +2,18 @@ import { PiHeartStraightThin, PiShoppingCartThin } from "react-icons/pi";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import './Navbar.css'
 import { useContext, useEffect, useState } from "react";
-import { CartContext } from "../../Provider/CartContext";
+import { CartContext } from "../../Provider/CartProvider";
+import profile from '../../assets/profile.png'
+import { AuthContext } from "../../Provider/AuthProvider";
 const Navbar = () => {
+    const { user, singOutUser } = useContext(AuthContext)
+    const { cartItems, wishlistItems } = useContext(CartContext)
+
     const [nowLocation, setNowLocation] = useState('/')
     const location = useLocation()
     useEffect(() => {
         setNowLocation(location.pathname)
     }, [location.pathname])
-    const { cartItems, wishlistItems } = useContext(CartContext)
     // nav bar category 
     return (
         <div className={`${nowLocation === '/' ? '' : 'bg-white'} sticky top-0 z-30`}>
@@ -51,6 +55,7 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
+                    {/* cart and wishlist section  */}
                     <div className="flex gap-4">
                         <Link
                             to={'/dashboard/cart-section'}
@@ -68,6 +73,31 @@ const Navbar = () => {
                                 <span className=" font-semibold p-1">{wishlistItems.length}</span>
                             </div>
                         </Link>
+                    </div>
+
+                    {/* user icon  */}
+                    <div className="dropdown dropdown-end ml-3">
+                        <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
+                            <div className="w-10 rounded-full">
+                                {
+                                    user ? <img src={user?.photoURL} alt="profile" /> : <img className="bg-white" src={profile} alt="profile" />
+                                }
+                            </div>
+                        </div>
+                        <ul
+                            tabIndex={0}
+                            className={`menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow ${nowLocation === '/' ? 'text-black' : 'bg-white border-b !border-black'}`}>
+                            <li>
+                                <a className="justify-between">
+                                    Profile
+                                    <span className="badge">New</span>
+                                </a>
+                            </li>
+                            <li><a>Settings</a></li>
+                            {
+                                user ? <li onClick={() => singOutUser()}><a>Logout</a></li> : <li><Link to={'/login'}>Login</Link></li>
+                            }
+                        </ul>
                     </div>
                 </div>
             </div >

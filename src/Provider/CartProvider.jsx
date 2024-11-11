@@ -1,15 +1,28 @@
 import PropTypes from "prop-types";
-import { createContext, useState } from "react";
+import { createContext, useContext, useState } from "react";
+import { AuthContext } from "./AuthProvider";
+import { useNavigate } from "react-router-dom";
 
 export const CartContext = createContext();
 
 export const CartProvider = ({ children }) => {
+    const { user } = useContext(AuthContext)
     const [cartItems, setCartItems] = useState([])
     const [wishlistItems, setWishlistItems] = useState([])
+    // const navigate = useNavigate()
 
     const addToCart = (product) => {
-        const newCart = [...cartItems, product]
-        setCartItems(newCart)
+        console.log(user);
+        if (!user) {
+            // navigate('/login')
+            console.log('user not found', user);
+
+        }
+        console.log('user found');
+        // else {
+            // const newCart = [...cartItems, product]
+            // setCartItems(newCart)
+        // }
     }
     const sortByPrice = () => {
         const sort = [...cartItems].sort((a, b) => b.price - a.price)

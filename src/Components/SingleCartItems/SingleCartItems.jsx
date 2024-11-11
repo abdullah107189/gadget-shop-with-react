@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import { useContext } from "react";
 import { TiDeleteOutline } from "react-icons/ti";
-import { CartContext } from "../../Provider/CartContext";
+import { CartContext } from "../../Provider/CartProvider";
 import Swal from "sweetalert2";
 const SingleCartItems = ({ items }) => {
     const { product_id, product_title, product_image, price, specification } = items;

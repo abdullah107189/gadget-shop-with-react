@@ -3,7 +3,7 @@ import UseBanner from "../../Hooks/useBanner";
 import { Outlet, useLocation, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { useContext } from "react";
-import { CartContext } from "../../Provider/CartContext";
+import { CartContext } from "../../Provider/CartProvider";
 import logo from '../../assets/Group.png'
 import { Helmet } from "react-helmet-async";
 const Dashboard = () => {

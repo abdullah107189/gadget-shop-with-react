@@ -4,7 +4,7 @@ import { PiHeartStraightThin, PiShoppingCartThin } from "react-icons/pi";
 import { Rating } from '@smastrom/react-rating'
 import '@smastrom/react-rating/style.css'
 import { useContext, useState, } from "react";
-import { CartContext } from "../../Provider/CartContext";
+import { CartContext } from "../../Provider/CartProvider";
 import Swal from "sweetalert2";
 import { Helmet } from "react-helmet-async";
 
