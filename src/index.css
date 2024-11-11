@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.sora-font {
+  font-family: "Sora", sans-serif;
+  font-optical-sizing: auto;
+}
+
+* {
+
+  scroll-behavior: smooth;
+}
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  overflow-y: scroll;
+}
+
+@layer utilities {
+  .pink {
+    color: #9538E2;
+  }
+
+  .bgPink {
+    background-color: #9538E2;
+  }
+
+  .pinkOutletBtn {
+    border: 1px solid #9538E2;
+    border-radius: 32px;
+    background-color: white;
+    color: #9538E2;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 10px 30px 10px 30px;
+  }
+
+  @media (max-width: 480px) {
+    .pinkOutletBtn {
+      border: 1px solid #9538E2;
+      border-radius: 32px;
+      background-color: white;
+      color: #9538E2;
+      font-size: 16px;
+      font-weight: 700;
+      padding: 5px 10px 5px 10px;
+    }
+  }
+}

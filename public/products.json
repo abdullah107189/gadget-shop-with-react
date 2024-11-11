@@ -1,0 +1,413 @@
+[
+    {
+        "product_id": "101",
+        "product_title": "Apple MacBook Pro 14-inch",
+        "product_image": "https://i.postimg.cc/Gttqqr15/hero-intro-endframe-e6khcva4hkeq-large.jpg",
+        "category": "computers",
+        "price": 1999,
+        "description": "Apple MacBook Pro 14-inch with M1 Pro chip, delivering powerful performance and impressive battery life.",
+        "specification": [
+            "Apple M1 Pro chip",
+            "16GB unified memory",
+            "512GB SSD",
+            "Liquid Retina XDR display"
+        ],
+        "availability": true,
+        "rating": 4.9
+    },
+    {
+        "product_id": "102",
+        "product_title": "Samsung Galaxy S23 Ultra",
+        "product_image": "https://i.postimg.cc/SQ1ZjX6F/Galaxy-S23-Ultra-Phantom-Black-2756.jpg",
+        "category": "phones",
+        "price": 1199,
+        "description": "Samsung's flagship phone with advanced camera capabilities and long-lasting battery.",
+        "specification": [
+            "Qualcomm Snapdragon 8 Gen 2",
+            "12GB RAM",
+            "256GB Storage",
+            "108MP camera"
+        ],
+        "availability": true,
+        "rating": 4.8
+    },
+    {
+        "product_id": "103",
+        "product_title": "Apple Watch Series 9",
+        "product_image": "https://i.postimg.cc/qvyQmj94/refurb-45-stainless-graphite-sport-band-midnight-s9.jpg",
+        "category": "smart watches",
+        "price": 399,
+        "description": "The latest Apple Watch with enhanced health tracking features and brighter display.",
+        "specification": [
+            "Apple S9 chip",
+            "Always-On Retina display",
+            "Blood oxygen & ECG app",
+            "Water-resistant"
+        ],
+        "availability": true,
+        "rating": 4.7
+    },
+    {
+        "product_id": "104",
+        "product_title": "Anker PowerPort Atom III Slim",
+        "product_image": "https://i.postimg.cc/JhQx8trF/sg-11134207-7rbms-lnckmyfu8b0n4e-36de6cbf-5877-4f4a-aa0d-17c46cd5543c.webp",
+        "category": "chargers",
+        "price": 55,
+        "description": "Ultra-slim USB-C charger with 30W power output, ideal for charging phones and tablets quickly.",
+        "specification": [
+            "30W USB-C Power Delivery",
+            "Compatible with most USB-C devices",
+            "Ultra-slim design"
+        ],
+        "availability": true,
+        "rating": 4.5
+    },
+    {
+        "product_id": "105",
+        "product_title": "Anker PowerCore 20100",
+        "product_image": "https://i.postimg.cc/zvyFTjCm/71-Of299-Q8n-L-AC-UF894-1000-QL80.jpg",
+        "category": "power banks",
+        "price": 59,
+        "description": "High-capacity power bank with 20100mAh battery for charging devices multiple times.",
+        "specification": [
+            "20100mAh capacity",
+            "Dual USB ports",
+            "High-speed charging technology"
+        ],
+        "availability": true,
+        "rating": 4.6
+    },
+    {
+        "product_id": "106",
+        "product_title": "Dell XPS 13",
+        "product_image": "https://i.postimg.cc/MHgb5Q5n/images.jpg",
+        "category": "computers",
+        "price": 999,
+        "description": "Compact and powerful laptop with Intel 12th Gen processor and stunning InfinityEdge display.",
+        "specification": [
+            "Intel Core i5-1230U",
+            "8GB RAM",
+            "256GB SSD",
+            "13.4-inch FHD+ display"
+        ],
+        "availability": true,
+        "rating": 4.7
+    },
+    {
+        "product_id": "107",
+        "product_title": "Google Pixel 7",
+        "product_image": "https://i.postimg.cc/dVPjTGDX/Pixel-7-Obsidian-1130.jpg",
+        "category": "phones",
+        "price": 599,
+        "description": "Google's latest smartphone with AI-powered camera features and clean Android experience.",
+        "specification": [
+            "Google Tensor G2 chip",
+            "8GB RAM",
+            "128GB Storage",
+            "50MP camera"
+        ],
+        "availability": true,
+        "rating": 4.6
+    },
+    {
+        "product_id": "108",
+        "product_title": "Samsung Galaxy Watch 6",
+        "product_image": "https://i.postimg.cc/zGCSw3gf/galaxy-watch6-safety-mo.webp",
+        "category": "smart watches",
+        "price": 349,
+        "description": "Samsung's latest smartwatch with advanced health tracking and customizable watch faces.",
+        "specification": [
+            "Exynos W930 chip",
+            "Always-On AMOLED display",
+            "Blood pressure & ECG sensor",
+            "Water-resistant"
+        ],
+        "availability": true,
+        "rating": 4.5
+    },
+    {
+        "product_id": "109",
+        "product_title": "Apple 20W USB-C Power Adapter",
+        "product_image": "https://i.postimg.cc/vTx54myb/s-l1200.jpg",
+        "category": "chargers",
+        "price": 59,
+        "description": "Apple's official 20W USB-C charger for fast charging compatible iPhones and iPads.",
+        "specification": [
+            "20W USB-C Power Delivery",
+            "Compatible with iPhones & iPads",
+            "Compact design"
+        ],
+        "availability": true,
+        "rating": 4.6
+    },
+    {
+        "product_id": "110",
+        "product_title": "Zendure SuperTank Pro",
+        "product_image": "https://i.postimg.cc/WpxHXFhm/1-75a481b9-0a83-4f24-91b1-7c16ec47c345.webp",
+        "category": "power banks",
+        "price": 130,
+        "description": "Powerful power bank with 26800mAh capacity and multiple USB-C outputs for charging laptops and devices.",
+        "specification": [
+            "26800mAh capacity",
+            "4 USB-C ports",
+            "Digital display for battery level"
+        ],
+        "availability": false,
+        "rating": 4.8
+    },
+    {
+        "product_id": "111",
+        "product_title": "Lenovo ThinkPad X1 Carbon",
+        "product_image": "https://i.postimg.cc/sgr0CkPv/Lenovo-Think-Pad-X1-5.webp",
+        "category": "computers",
+        "price": 1399,
+        "description": "Durable and lightweight business laptop with high processing power and long battery life.",
+        "specification": [
+            "Intel Core i7-1260P",
+            "16GB RAM",
+            "512GB SSD",
+            "14-inch WQXGA display"
+        ],
+        "availability": true,
+        "rating": 4.8
+    },
+    {
+        "product_id": "112",
+        "product_title": "OnePlus 11",
+        "product_image": "https://i.postimg.cc/MGssRXCQ/oneplus-11-2.jpg",
+        "category": "phones",
+        "price": 699,
+        "description": "Powerful smartphone with fast charging and top-tier Snapdragon processor.",
+        "specification": [
+            "Qualcomm Snapdragon 8 Gen 2",
+            "12GB RAM",
+            "256GB Storage",
+            "50MP camera"
+        ],
+        "availability": true,
+        "rating": 4.7
+    },
+    {
+        "product_id": "113",
+        "product_title": "Fitbit Sense 2",
+        "product_image": "https://i.postimg.cc/C1zc4S06/61-Wpi-PLat-CL-AC-SL1500.jpg",
+        "category": "smart watches",
+        "price": 299,
+        "description": "Health-focused smartwatch with stress management and heart monitoring features.",
+        "specification": [
+            "EDA Scan app",
+            "Skin temperature sensor",
+            "Battery life up to 6 days",
+            "Water-resistant"
+        ],
+        "availability": true,
+        "rating": 4.5
+    },
+    {
+        "product_id": "114",
+        "product_title": "Anker Nano II 65W Charger",
+        "product_image": "https://i.postimg.cc/sXqw6qDf/0574505-anker-nano-ii-30w-gan-ii-usb-c-fast-charger-adapter.jpg",
+        "category": "chargers",
+        "price": 65,
+        "description": "Compact 65W charger with USB-C compatibility, ideal for charging laptops and smartphones.",
+        "specification": [
+            "65W USB-C Power Delivery",
+            "GaN technology",
+            "Compact design"
+        ],
+        "availability": true,
+        "rating": 4.8
+    },      
+    {
+        "product_id": "119",
+        "product_title": "Sony WH-1000XM5",
+        "product_image": "https://i.postimg.cc/zf2LsV6c/sony-wh1000xm5.jpg",
+        "category": "headphones",
+        "price": 399,
+        "description": "Industry-leading noise-canceling headphones with 30-hour battery life and premium sound quality.",
+        "specification": [
+            "Active noise canceling",
+            "30 hours battery life",
+            "Bluetooth 5.2",
+            "Alexa built-in"
+        ],
+        "availability": true,
+        "rating": 4.9
+    },
+    {
+        "product_id": "120",
+        "product_title": "Nintendo Switch OLED",
+        "product_image": "https://i.postimg.cc/HkBcWkDp/nintendo-switch-oled.jpg",
+        "category": "gaming consoles",
+        "price": 349,
+        "description": "Portable gaming console with vibrant OLED screen and extended battery life.",
+        "specification": [
+            "7-inch OLED display",
+            "64GB internal storage",
+            "Up to 9 hours battery life",
+            "Joy-Con controllers"
+        ],
+        "availability": true,
+        "rating": 4.8
+    },
+    {
+        "product_id": "121",
+        "product_title": "DJI Mavic Air 2",
+        "product_image": "https://i.postimg.cc/RZPVqD0g/dji-mavic-air-2.jpg",
+        "category": "drones",
+        "price": 799,
+        "description": "Compact drone with 4K video recording, obstacle avoidance, and 34 minutes of flight time.",
+        "specification": [
+            "4K camera",
+            "34 minutes flight time",
+            "3-axis gimbal",
+            "Intelligent shooting modes"
+        ],
+        "availability": true,
+        "rating": 4.7
+    },
+    {
+        "product_id": "122",
+        "product_title": "Canon EOS R6",
+        "product_image": "https://i.postimg.cc/65Cck4vK/canon-eos-r6.jpg",
+        "category": "cameras",
+        "price": 2499,
+        "description": "Mirrorless camera with advanced autofocus, 20MP sensor, and 4K video recording for professionals.",
+        "specification": [
+            "20MP full-frame sensor",
+            "4K 60fps video",
+            "Dual Pixel autofocus",
+            "5-axis in-body stabilization"
+        ],
+        "availability": true,
+        "rating": 4.9
+    },
+    {
+        "product_id": "123",
+        "product_title": "JBL Charge 5",
+        "product_image": "https://i.postimg.cc/3xkjMp0s/jbl-charge-5.jpg",
+        "category": "speakers",
+        "price": 179,
+        "description": "Portable Bluetooth speaker with long-lasting battery life and waterproof design.",
+        "specification": [
+            "20 hours battery life",
+            "IP67 waterproof rating",
+            "Bluetooth 5.1",
+            "Powerful bass"
+        ],
+        "availability": true,
+        "rating": 4.7
+    },
+    {
+        "product_id": "124",
+        "product_title": "Amazon Echo Dot (5th Gen)",
+        "product_image": "https://i.postimg.cc/02szCwTv/echo-dot-5th-gen.jpg",
+        "category": "smart home",
+        "price": 49,
+        "description": "Compact smart speaker with Alexa, ideal for hands-free control of smart home devices.",
+        "specification": [
+            "Alexa built-in",
+            "Improved audio",
+            "Compatible with smart home devices",
+            "Bluetooth connectivity"
+        ],
+        "availability": true,
+        "rating": 4.6
+    },
+    {
+        "product_id": "125",
+        "product_title": "Samsung Odyssey G9",
+        "product_image": "https://i.postimg.cc/j24Bdxk2/samsung-odyssey-g9.jpg",
+        "category": "monitors",
+        "price": 1199,
+        "description": "49-inch curved gaming monitor with dual QHD resolution and 240Hz refresh rate.",
+        "specification": [
+            "49-inch dual QHD",
+            "240Hz refresh rate",
+            "HDR1000",
+            "1ms response time"
+        ],
+        "availability": true,
+        "rating": 4.8
+    },
+    {
+        "product_id": "201",
+        "product_title": "Anker Soundcore Life Q20",
+        "product_image": "https://i.postimg.cc/44H87fBY/Anker-Soundcore-Q20-05.jpg",
+        "category": "accessories",
+        "price": 60,
+        "description": "Active noise-canceling wireless headphones with deep bass and long battery life.",
+        "specification": [
+            "40-hour playtime",
+            "Active Noise Cancelling",
+            "Bluetooth 5.0",
+            "Hi-Res certified sound"
+        ],
+        "availability": true,
+        "rating": 4.7
+    },
+    {
+        "product_id": "202",
+        "product_title": "Logitech MX Master 3 Mouse",
+        "product_image": "https://i.postimg.cc/ZKrVHfkZ/log.jpg",
+        "category": "accessories",
+        "price": 99,
+        "description": "Advanced wireless mouse with customizable buttons and precise scrolling.",
+        "specification": [
+            "USB-C rechargeable",
+            "Logitech Flow technology",
+            "Ergonomic design",
+            "4000 DPI sensor"
+        ],
+        "availability": true,
+        "rating": 4.8
+    },
+    {
+        "product_id": "203",
+        "product_title": "Samsung T7 Portable SSD 1TB",
+        "product_image": "https://i.postimg.cc/zff7J8yX/hq720.jpg",
+        "category": "accessories",
+        "price": 109,
+        "description": "Portable SSD with fast data transfer speeds, ideal for quick file access and backup.",
+        "specification": [
+            "1TB storage capacity",
+            "USB 3.2 Gen 2",
+            "Read speed up to 1050MB/s",
+            "Shock-resistant"
+        ],
+        "availability": true,
+        "rating": 4.6
+    },
+    {
+        "product_id": "204",
+        "product_title": "Apple MagSafe Charger",
+        "product_image": "https://i.postimg.cc/hjz0ds8k/Apple-Mag-Safe-Charger-2.jpg",
+        "category": "accessories",
+        "price": 59,
+        "description": "MagSafe wireless charger for easy, fast charging compatible with iPhone models.",
+        "specification": [
+            "15W charging speed",
+            "Compatible with MagSafe cases",
+            "USB-C connection",
+            "Compact design"
+        ],
+        "availability": true,
+        "rating": 4.5
+    },
+    {
+        "product_id": "205",
+        "product_title": "Amazon Echo Dot (4th Gen)",
+        "product_image": "https://i.postimg.cc/Qt2Jk70H/6430063cv12d-1.jpg",
+        "category": "accessories",
+        "price": 69,
+        "description": "Smart speaker with Alexa, designed for hands-free control and smart home integration.",
+        "specification": [
+            "Voice control with Alexa",
+            "Compact design",
+            "Bluetooth and Wi-Fi",
+            "Multi-room music"
+        ],
+        "availability": true,
+        "rating": 4.7
+    }
+]
