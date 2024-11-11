@@ -3,11 +3,18 @@ import { useContext } from "react";
 import { TiDeleteOutline } from "react-icons/ti";
 import { CartContext } from "../../Provider/CartProvider";
 import Swal from "sweetalert2";
+import { AuthContext } from "../../Provider/AuthProvider";
+import { useNavigate } from "react-router-dom";
 const SingleWishListCard = ({ items }) => {
     const { product_title, product_image, price, description, } = items;
 
     const { cartItems, addToCart, deleteWishlistCart } = useContext(CartContext);
+    const { user } = useContext(AuthContext)
+    const navigate = useNavigate()
     const handleAddToCart = (product) => {
+        if (!user) {
+            return navigate('/login')
+        }
         const checkCart = cartItems.includes(product)
         if (checkCart === true) {
             return Swal.fire({

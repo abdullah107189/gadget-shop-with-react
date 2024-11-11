@@ -7,6 +7,7 @@ import { useContext, useState, } from "react";
 import { CartContext } from "../../Provider/CartProvider";
 import Swal from "sweetalert2";
 import { Helmet } from "react-helmet-async";
+import { AuthContext } from "../../Provider/AuthProvider";
 
 const ProductsDetails = () => {
     const { id } = useParams()
@@ -17,8 +18,11 @@ const ProductsDetails = () => {
 
     // add to cart and wishlist function
     const { addToCart, addToWishlist, cartItems, wishlistItems, deleteWishlistCart } = useContext(CartContext);
-
+    const { user } = useContext(AuthContext)
     const handleAddToCart = (product) => {
+        if (!user) {
+            return navigate('/login')
+        }
         const checkCart = cartItems.find(item => item.product_id === product.product_id)
         if (checkCart) {
             return Swal.fire({
@@ -42,7 +46,6 @@ const ProductsDetails = () => {
     // handle wishlist button 
     const [isDisable, setIsDistable] = useState(false)
     const handleAddToWishlist = (product) => {
-
         const checkWishlist = wishlistItems.find(item => item.product_id === product.product_id)
         const checkCart = cartItems.find(item => item.product_id === product.product_id)
         if (checkWishlist) {
