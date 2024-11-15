@@ -1,4 +1,4 @@
-import { useLoaderData, useNavigate, useParams } from "react-router-dom";
+import { useLoaderData, useLocation, useNavigate, useParams } from "react-router-dom";
 import UseBanner from "../../Hooks/useBanner";
 import { PiHeartStraightThin, PiShoppingCartThin } from "react-icons/pi";
 import { Rating } from '@smastrom/react-rating'
@@ -19,9 +19,10 @@ const ProductsDetails = () => {
     // add to cart and wishlist function
     const { addToCart, addToWishlist, cartItems, wishlistItems, deleteWishlistCart } = useContext(CartContext);
     const { user } = useContext(AuthContext)
+    const location = useLocation(   )
     const handleAddToCart = (product) => {
         if (!user) {
-            return navigate('/login')
+            return navigate("/login", { state: { from: location }, replace: true })
         }
         const checkCart = cartItems.find(item => item.product_id === product.product_id)
         if (checkCart) {

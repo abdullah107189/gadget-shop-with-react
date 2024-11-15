@@ -30,8 +30,7 @@ const Register = () => {
         }
         setLoading(true)
         createUserInEmailAndPass(email, password)
-            .then(result => {
-                console.log(result.user)
+            .then(() => {
                 serUserNameAndPhoto(name, photoURl)
                     .then(() => {
                         setLoading(false)
@@ -75,8 +74,6 @@ const Register = () => {
                         <input name="photoURL" type="text" placeholder="Photo url" className="input input-bordered" required />
                     </div>
                     {/* email */}
-
-
                     <div className="form-control">
                         <label className="label">
                             <span className="label-text">Email</span>
@@ -111,7 +108,6 @@ const Register = () => {
                     </div>
 
                     <div className="form-control mt-6">
-
                         <button className="btn btn-primary">  {loading ? (<span className="loading loading-spinner text-white"></span>) : RegSuccess ? (<img className="w-10 object-contain rounded-md" src={successLogin} alt="" />) : ('Registration')}</button>
                     </div>
                     <p>You have and Account then <Link className="btn-link" to={'/login'}>Login</Link></p>

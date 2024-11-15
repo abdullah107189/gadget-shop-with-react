@@ -1,29 +1,47 @@
-import { useContext, } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useContext, useState, } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
 import Swal from "sweetalert2";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
+import toast from "react-hot-toast";
+import successLogin from '../../assets/verified.gif'
 
 const Login = () => {
+    const [passwordShow, setPasswordShow] = useState(false)
+    const [RegSuccess, setRegSuccess] = useState(false)
+    const [loading, setLoading] = useState(false)
     const { loginUserInEmailAndPass, createUserInGoogle } = useContext(AuthContext)
+
     const navigate = useNavigate();
-    // const handleLogin = (e) => {
-    //     e.preventDefault()
-    //     const form = new FormData(e.target)
-    //     const email = form.get('email')
-    //     const password = form.get('password')
-    //     console.log({ email, password });
-    //     // loginUserInEmailAndPass(email, password)
-    //     //     .then(res => {
-    //     //         console.log(res.user);
-    //     //     })
-    //     //     .catch(err => {
-    //     //         console.log(err.message);
-    //     //     })
-    // }
+    let location = useLocation();
+    let from = location.state?.from?.pathname || "/";
+
+    const handleLogin = (e) => {
+        e.preventDefault()
+        const form = new FormData(e.target)
+        const email = form.get('email')
+        const password = form.get('password')
+        setLoading(true)
+        loginUserInEmailAndPass(email, password)
+            .then(() => {
+                setLoading(false)
+                setRegSuccess(true)
+                Swal.fire({
+                    title: "Login done !",
+                    text: "Well come to our shop",
+                    icon: "success"
+                });
+                e.target.reset()
+                navigate(from, { replace: true });
+            })
+            .catch(err => {
+                setLoading(false)
+                toast.error(err.message)
+            })
+    }
     const handleLoginWithGoogle = () => {
         createUserInGoogle()
-            .then(res => {
-                console.log(res);
+            .then(() => {
                 Swal.fire({
                     title: "Login done !",
                     text: "Login using google",
@@ -31,31 +49,36 @@ const Login = () => {
                 });
                 navigate('/')
             })
-            .catch(err => console.log(err.message))
+            .catch(err => toast.error(err.message))
     }
 
     return (
         <div className="hero bg-base-200 min-h-screen">
             <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
-                <form className="card-body">
+                <form onSubmit={handleLogin} className="card-body">
                     <h1 className="text-3xl font-bold text-center">Login Section</h1>
+                    {/* email */}
                     <div className="form-control">
                         <label className="label">
                             <span className="label-text">Email</span>
                         </label>
                         <input name="email" type="email" placeholder="email" className="input input-bordered" required />
                     </div>
+                    {/* password */}
                     <div className="form-control">
                         <label className="label">
                             <span className="label-text">Password</span>
                         </label>
-                        <input name="password" type="password" placeholder="password" className="input input-bordered" required />
-                        <label className="label">
-                            <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
-                        </label>
+                        <div className="relative">
+                            <input name="password" type={`${passwordShow ? 'text' : 'password'}`} placeholder="Set your password" className="input input-bordered w-full" required />
+                            <span onClick={() => setPasswordShow(!passwordShow)} className="absolute right-2 bottom-2 p-2 hover:bg-gray-200 rounded-full cursor-pointer">{
+                                passwordShow ? <FaEyeSlash /> : <FaEye />
+                            }</span>
+                        </div>
+
                     </div>
                     <div className="form-control mt-6">
-                        <button onClick={handleLogin} className="btn btn-primary">Login</button>
+                        <button className="btn btn-primary">  {loading ? (<span className="loading loading-spinner text-white"></span>) : RegSuccess ? (<img className="w-10 object-contain rounded-md" src={successLogin} alt="" />) : ('Login')}</button>
                     </div>
                     <div className="grid grid-cols-2 w-full gap-2">
                         <button onClick={handleLoginWithGoogle} className="btn btn-primary">Google</button>

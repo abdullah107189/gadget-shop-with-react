@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import { createContext, useEffect, useState } from "react";
 import { auth } from "../firebase.init";
 import Swal from "sweetalert2";
+import toast from "react-hot-toast";
 
 export const AuthContext = createContext(null)
 const AuthProvider = ({ children }) => {
@@ -37,14 +38,13 @@ const AuthProvider = ({ children }) => {
                 });
             })
             .catch((error) => {
-                console.log(error.message);
+                toast.error(error.message);
             });
     }
 
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, currentUser => {
             setUser(currentUser)
-            // console.log(currentUser);
             setIsLoading(false)
         });
         return () => {

@@ -4,8 +4,7 @@ import Swal from 'sweetalert2';
 function AnotherPage() {
     const { register, handleSubmit, formState: { errors }, reset } = useForm();
 
-    const onSubmit = (data) => {
-        console.log("Complaint Submitted:", data);
+    const onSubmit = () => {
         reset()
         Swal.fire({
             title: "Thank you!",
