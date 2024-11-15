@@ -1,4 +1,4 @@
-import { createBrowserRouter, } from "react-router-dom";
+import { createBrowserRouter, Navigate, } from "react-router-dom";
 import Main from "../MainLayout/Main";
 import ErrorPage from "../Components/ErrorPage/ErrorPage";
 import Home from "../Pages/Home/Home";
@@ -46,6 +46,10 @@ const router = createBrowserRouter([
                 path: 'statistics',
                 element: <Statistics></Statistics>,
                 loader: () => fetch('/products.json'),
+            },
+            {
+                path: 'dashboard',
+                element: <Navigate to={'cart-section'}></Navigate>
             },
             {
                 path: 'dashboard',
