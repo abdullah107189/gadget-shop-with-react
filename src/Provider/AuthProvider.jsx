@@ -1,4 +1,4 @@
-import { GoogleAuthProvider, onAuthStateChanged, signInWithPopup, signOut } from "firebase/auth";
+import { createUserWithEmailAndPassword, GoogleAuthProvider, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
 import PropTypes from "prop-types";
 import { createContext, useEffect, useState } from "react";
 import { auth } from "../firebase.init";
@@ -6,7 +6,7 @@ import Swal from "sweetalert2";
 
 export const AuthContext = createContext(null)
 const AuthProvider = ({ children }) => {
-    
+
     const [user, setUser] = useState(null)
 
     const [istLoading, setIsLoading] = useState(true)
@@ -14,7 +14,17 @@ const AuthProvider = ({ children }) => {
 
     const createUserInGoogle = () => {
         return signInWithPopup(auth, googleProvider)
-
+    }
+    const createUserInEmailAndPass = (email, password) => {
+        return createUserWithEmailAndPassword(auth, email, password)
+    }
+    const loginUserInEmailAndPass = (email, password) => {
+        return signInWithEmailAndPassword(auth, email, password)
+    }
+    const serUserNameAndPhoto = (name, photo) => {
+        return updateProfile(auth.currentUser, {
+            displayName: name, photoURL: photo
+        })
     }
     const singOutUser = () => {
         setIsLoading(true)
@@ -41,11 +51,15 @@ const AuthProvider = ({ children }) => {
             unsubscribe()
         }
     }, [])
+
     const authInfo = {
         user,
         createUserInGoogle,
         singOutUser,
         istLoading,
+        createUserInEmailAndPass,
+        serUserNameAndPhoto,
+        loginUserInEmailAndPass,
     }
 
     return (<AuthContext.Provider value={authInfo}>
