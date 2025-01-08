@@ -52,3 +52,22 @@ Enhances the user experience by providing all the information needed for purchas
 The site uses Context API to manage cart and wishlist data globally.
 Ensures seamless access to shared data across components without prop-drilling, making the app faster and easier to maintain.
 These features combine to make a user-friendly, interactive, and responsive e-commerce site focused on gadgets!
+
+## Installation
+
+To get started with the project, follow these steps:
+
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/abdullah107189/gadget-shop-with-react.git
+
+2. Navigate to the project directory:
+   ```bash
+   cd gadget-shop-with-react
+  
+3. Install dependencies:
+   ```bash
+   npm install
+4. Start the development server:
+   ```bash
+   npm run dev
